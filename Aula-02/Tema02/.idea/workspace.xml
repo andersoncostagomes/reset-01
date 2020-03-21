@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7cf1c493-390e-456c-b40b-a6abc750a688" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Batalha.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Batalha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Barbaro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Barbaro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Clerigo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Clerigo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Druida.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Druida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Feiticeiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Feiticeiro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Guerreiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Guerreiro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Mago.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Mago.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Espada.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Espada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Machado.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Machado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Magia1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Magia1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Magia2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Magia2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Poder1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Poder1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Poder2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Poder2.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1ZQOvYxQy0PMzIFsEOhryYRIqH4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7cf1c493-390e-456c-b40b-a6abc750a688" name="Default Changelist" comment="" />
+      <created>1584768082261</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584768082261</updated>
+    </task>
+    <servers />
+  </component>
+</project>
