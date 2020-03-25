@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cf1c493-390e-456c-b40b-a6abc750a688" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Batalha.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Batalha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Barbaro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Barbaro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Clerigo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Clerigo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Druida.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Druida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Feiticeiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Feiticeiro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Guerreiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Guerreiro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Mago.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/Lutadoes/Mago.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Espada.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Espada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Machado.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Machado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Magia1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Magia1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Magia2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Magia2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Poder1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Poder1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Poder2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-01/Tema01/src/PoderesDivinosArmasMagias/Poder2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,5 +35,19 @@
       <updated>1584768082261</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="739" y="261" key="FileChooserDialogImpl" timestamp="1584792259039">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584792259039" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1584790578117">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584790578117" />
+    <state x="342" y="140" key="new project wizard" timestamp="1584792275751">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1584792275751" />
   </component>
 </project>
