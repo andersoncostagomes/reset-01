@@ -74,7 +74,7 @@ public class Série {
         return categoriaSérie;
     }
 
-    public void setCategoria(CategoriaSérie categoriaSérie) {
+    public void setCategoriaSérie(CategoriaSérie categoriaSérie) {
         this.categoriaSérie = categoriaSérie;
     }
 
