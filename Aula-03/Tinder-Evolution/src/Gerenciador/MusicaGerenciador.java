@@ -36,6 +36,7 @@ public class MusicaGerenciador {
         }
     }
     public List<Musica> listar(){
+
         return acervo.listar();
     }
     public Musica procurar(int id){
