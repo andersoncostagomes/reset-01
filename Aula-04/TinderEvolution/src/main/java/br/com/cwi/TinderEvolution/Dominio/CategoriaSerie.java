@@ -1,6 +1,6 @@
 package br.com.cwi.TinderEvolution.Dominio;
 
-public enum CategoriaSérie {
+public enum CategoriaSerie {
     DRAMA,
     COMEDIA,
     SUSPENSE,

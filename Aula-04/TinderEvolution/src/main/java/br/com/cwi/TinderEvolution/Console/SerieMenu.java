@@ -1,18 +1,18 @@
 package br.com.cwi.TinderEvolution.Console;
 
-import br.com.cwi.TinderEvolution.Dominio.CategoriaSérie;
-import br.com.cwi.TinderEvolution.Dominio.Série;
-import br.com.cwi.TinderEvolution.Gerenciador.SérieGerenciador;
+import br.com.cwi.TinderEvolution.Dominio.CategoriaSerie;
+import br.com.cwi.TinderEvolution.Dominio.Serie;
+import br.com.cwi.TinderEvolution.Gerenciador.SerieGerenciador;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
-public class SérieMenu {
-    private SérieGerenciador gerenciador;
+public class SerieMenu {
+    private SerieGerenciador gerenciador;
 
-    public SérieMenu() {
-        this.gerenciador = new SérieGerenciador();
+    public SerieMenu() {
+        this.gerenciador = new SerieGerenciador();
     }
 
     public void opções() {
@@ -55,7 +55,7 @@ public class SérieMenu {
         }
     }
 
-    public Série create() {
+    public Serie create() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Criação de Série:");
 
@@ -90,46 +90,46 @@ public class SérieMenu {
         System.out.println("> ");
         String categoria = scanner.next();
 
-        CategoriaSérie categoriaSérie;
+        CategoriaSerie categoriaSerie;
         switch (categoria) {
             case "D":
-                categoriaSérie = CategoriaSérie.DRAMA;
+                categoriaSerie = CategoriaSerie.DRAMA;
                 break;
             case "C":
-                categoriaSérie = CategoriaSérie.COMEDIA;
+                categoriaSerie = CategoriaSerie.COMEDIA;
                 break;
             case "S":
-                categoriaSérie = CategoriaSérie.SUSPENSE;
+                categoriaSerie = CategoriaSerie.SUSPENSE;
                 break;
             case "T":
-                categoriaSérie = CategoriaSérie.TERROR;
+                categoriaSerie = CategoriaSerie.TERROR;
                 break;
             case "A":
-                categoriaSérie = CategoriaSérie.ACAO;
+                categoriaSerie = CategoriaSerie.ACAO;
                 break;
             case "M":
-                categoriaSérie = CategoriaSérie.SITCOM;
+                categoriaSerie = CategoriaSerie.SITCOM;
                 break;
             default:
-                categoriaSérie = CategoriaSérie.DRAMA;
+                categoriaSerie = CategoriaSerie.DRAMA;
                 break;
         }
 
         System.out.print("Sinopse: ");
         String sinopse = scanner.next();
 
-        Série série = new Série(nome, diretor, LocalDate.of(ano, mes, dia), numeroTemporadas, numeroEpisódios, categoriaSérie, sinopse);
+        Serie série = new Serie(nome, diretor, LocalDate.of(ano, mes, dia), numeroTemporadas, numeroEpisódios, categoriaSerie, sinopse);
         return gerenciador.salvar(série);
 
     }
 
-    public Série editar() {
+    public Serie editar() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Edição de Série");
         System.out.println("Qual série você deseja editar?");
 
-        List<Série> séries = gerenciador.listar();
-        for (Série série : séries) {
+        List<Serie> séries = gerenciador.listar();
+        for (Serie série : séries) {
             System.out.println("[ " + série.getId() + " ]: " + série.getNome());
         }
         System.out.println("> ");
@@ -167,28 +167,28 @@ public class SérieMenu {
         System.out.println("> ");
         String categoria = scanner.next();
 
-        CategoriaSérie categoriaSérie;
+        CategoriaSerie categoriaSerie;
         switch (categoria) {
             case "D":
-                categoriaSérie = CategoriaSérie.DRAMA;
+                categoriaSerie = CategoriaSerie.DRAMA;
                 break;
             case "C":
-                categoriaSérie = CategoriaSérie.COMEDIA;
+                categoriaSerie = CategoriaSerie.COMEDIA;
                 break;
             case "S":
-                categoriaSérie = CategoriaSérie.SUSPENSE;
+                categoriaSerie = CategoriaSerie.SUSPENSE;
                 break;
             case "T":
-                categoriaSérie = CategoriaSérie.TERROR;
+                categoriaSerie = CategoriaSerie.TERROR;
                 break;
             case "A":
-                categoriaSérie = CategoriaSérie.ACAO;
+                categoriaSerie = CategoriaSerie.ACAO;
                 break;
             case "M":
-                categoriaSérie = CategoriaSérie.SITCOM;
+                categoriaSerie = CategoriaSerie.SITCOM;
                 break;
             default:
-                categoriaSérie = CategoriaSérie.DRAMA;
+                categoriaSerie = CategoriaSerie.DRAMA;
                 break;
         }
 
@@ -196,9 +196,9 @@ public class SérieMenu {
         String sinopse = scanner.next();
 
 
-        Série atualização = new Série(nome, diretor, LocalDate.of(ano, mes, dia), numeroTemporadas, numeroEpisódios, categoriaSérie, sinopse);
+        Serie atualização = new Serie(nome, diretor, LocalDate.of(ano, mes, dia), numeroTemporadas, numeroEpisódios, categoriaSerie, sinopse);
 
-        Série sérieAtualizada = gerenciador.editar(id, atualização);
+        Serie sérieAtualizada = gerenciador.editar(id, atualização);
 
         if (sérieAtualizada == null) {
             System.out.println("Série não encontrada.");
@@ -208,12 +208,12 @@ public class SérieMenu {
         return sérieAtualizada;
     }
 
-    private List<Série> listar() {
+    private List<Serie> listar() {
 
         System.out.println("Lista de Séries:");
-        List<Série> séries = gerenciador.listar();
+        List<Serie> séries = gerenciador.listar();
 
-        for (Série série : séries) {
+        for (Serie série : séries) {
             System.out.println(série);
         }
 
@@ -229,7 +229,7 @@ public class SérieMenu {
         System.out.print("> ");
         int id = scanner.nextInt();
 
-        Série série = gerenciador.procurar(id);
+        Serie série = gerenciador.procurar(id);
 
         if (série == null) {
             System.out.println("Série não encontrada.");
@@ -244,8 +244,8 @@ public class SérieMenu {
         System.out.println("Deletando Série:");
         System.out.println("Qual série deseja deletar?");
 
-        List<Série> séries = gerenciador.listar();
-        for (Série série : séries) {
+        List<Serie> séries = gerenciador.listar();
+        for (Serie série : séries) {
             System.out.println("[ " + série.getId() + " ]: " + série.getNome());
         }
 

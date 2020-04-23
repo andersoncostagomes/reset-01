@@ -6,9 +6,9 @@ public class App {
     public static void main(String[] args) {
 
         MusicaMenu musicaMenu = new MusicaMenu();
-        UsuárioMenu usuárioMenu = new UsuárioMenu();
+        UsuarioMenu usuarioMenu = new UsuarioMenu();
         FilmeMenu filmeMenu = new FilmeMenu();
-        SérieMenu sérieMenu = new SérieMenu();
+        SerieMenu serieMenu = new SerieMenu();
         JogoMenu jogoMenu = new JogoMenu();
         EsporteMenu esporteMenu = new EsporteMenu();
         CuriosidadeMenu curiosidadeMenu = new CuriosidadeMenu();
@@ -32,7 +32,7 @@ public class App {
 
             switch (opcao) {
                 case 'U':
-                    usuárioMenu.opções();
+                    usuarioMenu.opções();
                     break;
 
                 case 'M':
@@ -44,7 +44,7 @@ public class App {
                     break;
 
                 case 'S':
-                    sérieMenu.opções();
+                    serieMenu.opções();
                     break;
 
                 case 'J':

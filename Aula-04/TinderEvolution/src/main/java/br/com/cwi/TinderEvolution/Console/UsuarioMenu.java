@@ -1,17 +1,17 @@
 package br.com.cwi.TinderEvolution.Console;
 
-import br.com.cwi.TinderEvolution.Dominio.Usuário;
-import br.com.cwi.TinderEvolution.Gerenciador.UsuárioGerenciador;
+import br.com.cwi.TinderEvolution.Dominio.Usuario;
+import br.com.cwi.TinderEvolution.Gerenciador.UsuarioGerenciador;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
-public class UsuárioMenu {
-    public UsuárioGerenciador gerenciador;
+public class UsuarioMenu {
+    public UsuarioGerenciador gerenciador;
 
-    public UsuárioMenu() {
-        this.gerenciador = new UsuárioGerenciador();
+    public UsuarioMenu() {
+        this.gerenciador = new UsuarioGerenciador();
     }
 
     public void opções() {
@@ -54,7 +54,7 @@ public class UsuárioMenu {
         }
     }
 
-    public Usuário create() {
+    public Usuario create() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Criação de Usuário:");
 
@@ -85,19 +85,22 @@ public class UsuárioMenu {
         System.out.print("Biografia: ");
         String biografia = scanner.next();
 
+        System.out.print("Foto: ");
+        String foto = scanner.nextLine();
 
-        Usuário usuário = new Usuário(nome, email, telefone, LocalDate.of(ano, mes, dia), latitude, longitude, biografia);
-        return gerenciador.cadastrar(usuário);
+
+        Usuario usuario = new Usuario(nome, email, telefone, LocalDate.of(ano, mes, dia), latitude, longitude, biografia, foto);
+        return gerenciador.cadastrar(usuario);
     }
 
-    public Usuário editar() {
+    public Usuario editar() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Edição de Usuário");
         System.out.println("Qual usuário você deseja editar?");
 
-        List<Usuário> usuários = gerenciador.listar();
-        for (Usuário usuário : usuários) {
-            System.out.println("[ " + usuário.getId() + " ]: " + usuário.getNome());
+        List<Usuario> usuarios = gerenciador.listar();
+        for (Usuario usuario : usuarios) {
+            System.out.println("[ " + usuario.getId() + " ]: " + usuario.getNome());
         }
         System.out.println("> ");
         int id = scanner.nextInt();
@@ -129,29 +132,32 @@ public class UsuárioMenu {
         System.out.print("Biografia: ");
         String biografia = scanner.nextLine();
 
+        System.out.print("Foto: ");
+        String foto = scanner.nextLine();
 
-        Usuário atualização = new Usuário(nome, email, telefone, LocalDate.of(ano, mes, dia), latitude, longitude, biografia);
+
+        Usuario atualização = new Usuario(nome, email, telefone, LocalDate.of(ano, mes, dia), latitude, longitude, biografia,foto);
 
 
-        Usuário usuárioAtualizado = gerenciador.editar(id, atualização);
+        Usuario usuarioAtualizado = gerenciador.editar(id, atualização);
 
-        if (usuárioAtualizado == null) {
+        if (usuarioAtualizado == null) {
             System.out.println("Usuário não encontrado.");
         } else {
-            System.out.println(usuárioAtualizado);
+            System.out.println(usuarioAtualizado);
         }
-        return usuárioAtualizado;
+        return usuarioAtualizado;
     }
-    private List<Usuário> listar() {
+    private List<Usuario> listar() {
 
         System.out.println("Lista de Usuários:");
-        List<Usuário> usuários = gerenciador.listar();
+        List<Usuario> usuarios = gerenciador.listar();
 
-        for (Usuário usuário : usuários) {
-            System.out.print(usuário);
+        for (Usuario usuario : usuarios) {
+            System.out.print(usuario);
         }
 
-        return usuários;
+        return usuarios;
     }
     private void procurar() {
 
@@ -162,12 +168,12 @@ public class UsuárioMenu {
         System.out.print("> ");
         int id = scanner.nextInt();
 
-        Usuário usuário = gerenciador.procurar(id);
+        Usuario usuario = gerenciador.procurar(id);
 
-        if (usuário == null) {
+        if (usuario == null) {
             System.out.println("Usuário não encontrado.");
         } else {
-            System.out.println(usuário);
+            System.out.println(usuario);
         }
     }
     private void deletar() {
@@ -176,9 +182,9 @@ public class UsuárioMenu {
         System.out.println("Deletando Usuário:");
         System.out.println("Qual usuário deseja deletar?");
 
-        List<Usuário> usuários = gerenciador.listar();
-        for (Usuário usuário : usuários) {
-            System.out.println("[ " + usuário.getId() + " ]: " + usuário.getNome());
+        List<Usuario> usuarios = gerenciador.listar();
+        for (Usuario usuario : usuarios) {
+            System.out.println("[ " + usuario.getId() + " ]: " + usuario.getNome());
         }
 
         System.out.print("> ");

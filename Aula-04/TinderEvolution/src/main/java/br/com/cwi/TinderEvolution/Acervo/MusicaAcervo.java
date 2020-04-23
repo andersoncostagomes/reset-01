@@ -19,7 +19,7 @@ public class MusicaAcervo {
         return musicas;
     }
 
-    public Musica procurar(int id) {
+    public static Musica procurar(int id) {
         for (Musica musica : musicas) {
             if (musica.getId() == id) {
                 return musica;

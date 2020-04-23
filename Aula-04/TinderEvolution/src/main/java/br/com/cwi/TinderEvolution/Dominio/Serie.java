@@ -2,23 +2,23 @@ package br.com.cwi.TinderEvolution.Dominio;
 
 import java.time.LocalDate;
 
-public class Série {
+public class Serie {
     private int id;
     private String nome;
     private String diretor;
-    private LocalDate dataDeLançamento;
+    private LocalDate dataDeLancamento;
     private int numeroTemporadas;
-    private int numeroEpisódios;
-    private CategoriaSérie categoriaSérie;
+    private int numeroEpisodios;
+    private CategoriaSerie categoriaSerie;
     private String sinopse;
 
-    public Série(String nome, String diretor, LocalDate dataDeLançamento, int numeroTemporadas, int numeroEpisódios, CategoriaSérie categoriaSérie, String sinopse) {
+    public Serie(String nome, String diretor, LocalDate dataDeLancamento, int numeroTemporadas, int numeroEpisodios, CategoriaSerie categoriaSerie, String sinopse) {
         this.nome = nome;
         this.diretor = diretor;
-        this.dataDeLançamento = dataDeLançamento;
+        this.dataDeLancamento = dataDeLancamento;
         this.numeroTemporadas = numeroTemporadas;
-        this.numeroEpisódios = numeroEpisódios;
-        this.categoriaSérie = categoriaSérie;
+        this.numeroEpisodios = numeroEpisodios;
+        this.categoriaSerie = categoriaSerie;
         this.sinopse = sinopse;
     }
 
@@ -47,11 +47,11 @@ public class Série {
     }
 
     public LocalDate getDataDeLançamento() {
-        return dataDeLançamento;
+        return dataDeLancamento;
     }
 
-    public void setDataDeLançamento(LocalDate dataDeLançamento) {
-        this.dataDeLançamento = dataDeLançamento;
+    public void setDataDeLançamento(LocalDate dataDeLancamento) {
+        this.dataDeLancamento = dataDeLancamento;
     }
 
     public int getNumeroTemporadas() {
@@ -63,19 +63,19 @@ public class Série {
     }
 
     public int getNumeroEpisódios() {
-        return numeroEpisódios;
+        return numeroEpisodios;
     }
 
-    public void setNumeroEpisódios(int numeroEpisódios) {
-        this.numeroEpisódios = numeroEpisódios;
+    public void setNumeroEpisódios(int numeroEpisodios) {
+        this.numeroEpisodios = numeroEpisodios;
     }
 
-    public CategoriaSérie getCategoriaSérie() {
-        return categoriaSérie;
+    public CategoriaSerie getCategoriaSerie() {
+        return categoriaSerie;
     }
 
-    public void setCategoriaSérie(CategoriaSérie categoriaSérie) {
-        this.categoriaSérie = categoriaSérie;
+    public void setCategoriaSerie(CategoriaSerie categoriaSerie) {
+        this.categoriaSerie = categoriaSerie;
     }
 
     public String getSinopse() {
@@ -91,9 +91,9 @@ public class Série {
                 "id: " + id +
                 ", Nome: " + nome +
                 ", Diretor: " + diretor +
-                ", Data de lançamento: " + dataDeLançamento +
-                ", Possui: " + numeroTemporadas + "temporadas, com " + numeroEpisódios + " episódios cada " +
-                ", Categoria: " + categoriaSérie +
+                ", Data de lançamento: " + dataDeLancamento +
+                ", Possui: " + numeroTemporadas + "temporadas, com " + numeroEpisodios + " episódios cada " +
+                ", Categoria: " + categoriaSerie +
                 ", Sinopse: \n" + sinopse + " }";
     }
 }

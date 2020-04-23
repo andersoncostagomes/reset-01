@@ -1,26 +1,26 @@
 package br.com.cwi.TinderEvolution.Acervo;
 
-import br.com.cwi.TinderEvolution.Dominio.Série;
+import br.com.cwi.TinderEvolution.Dominio.Serie;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SérieAcervo {
+public class SerieAcervo {
     public static int contador = 1;
-    public static final List<Série> séries = new ArrayList<>();
+    public static final List<Serie> séries = new ArrayList<>();
 
-    public Série salvar(Série série){
+    public Serie salvar(Serie série){
         série.setId(contador++);
         séries.add(série);
         return série;
     }
 
-    public List<Série> listar(){
+    public List<Serie> listar(){
         return séries;
     }
 
-    public Série procurar(int id){
-        for(Série série: séries){
+    public Serie procurar(int id){
+        for(Serie série: séries){
             if(série.getId() == id){
                 return série;
             }
@@ -29,19 +29,19 @@ public class SérieAcervo {
     }
 
     public boolean deletar(int id){
-        Série sérieParaDeletar = procurar(id);
+        Serie sérieParaDeletar = procurar(id);
         if(sérieParaDeletar != null){
             return séries.remove(sérieParaDeletar);
         }
         return false;
     }
-    public Série editar(Série sérieParaEditar, Série sérieAtualizada){
+    public Serie editar(Serie sérieParaEditar, Serie sérieAtualizada){
         sérieParaEditar.setNome(sérieAtualizada.getNome());
         sérieParaEditar.setDiretor(sérieAtualizada.getDiretor());
         sérieParaEditar.setDataDeLançamento(sérieAtualizada.getDataDeLançamento());
         sérieParaEditar.setNumeroTemporadas(sérieAtualizada.getNumeroTemporadas());
         sérieParaEditar.setNumeroEpisódios(sérieAtualizada.getNumeroEpisódios());
-        sérieParaEditar.setCategoriaSérie(sérieAtualizada.getCategoriaSérie());
+        sérieParaEditar.setCategoriaSerie(sérieAtualizada.getCategoriaSerie());
         sérieParaEditar.setSinopse(sérieAtualizada.getSinopse());
 
         return sérieParaEditar;
