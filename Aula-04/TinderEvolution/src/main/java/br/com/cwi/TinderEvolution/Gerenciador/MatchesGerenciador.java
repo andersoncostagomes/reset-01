@@ -11,34 +11,35 @@ public class MatchesGerenciador {
     UsuarioGerenciador usuarioGerenciador = new UsuarioGerenciador();
 
     @PostMapping("/{idAvaliado}/avaliador/{idAvaliador}/like")
-    public boolean curtirUsuario (@PathVariable int idUsuarioAvalido, @PathVariable  int idUsuarioAvaliador){
-        return usuarioGerenciador.curtirUsuario(idUsuarioAvalido, idUsuarioAvaliador);
+    public boolean curtirUsuario (@PathVariable int idAvaliado, @PathVariable int idAvaliador){
+        return usuarioGerenciador.curtirUsuario(idAvaliado, idAvaliador);
     }
 
-    @DeleteMapping("/{idAvaliado}/avaliador/{idAvaliador}/like")
-    public String removerCurtida (@PathVariable  int idUsuarioAvaliado, @PathVariable  int idUsuarioAvaliador){
-        usuarioGerenciador.removerCurtida(idUsuarioAvaliado,idUsuarioAvaliador);
-        return "Like deletado";
+    @DeleteMapping ("/{idAvaliado}/avaliador/{idAvaliador}/like")
+    public String removerCurtidaUsuario (@PathVariable int idAvaliado, @PathVariable  int idAvaliador){
+        usuarioGerenciador.removerCurtida(idAvaliado, idAvaliador);
+        return null;
     }
 
     @PostMapping("/{idAvaliado}/avaliador/{idAvaliador}/dislike")
-    public boolean descurtirUsuario (@PathVariable int idUsuarioAvaliado, @PathVariable int idUsuarioAvaliador){
-        return usuarioGerenciador.descurtirUsuario(idUsuarioAvaliado, idUsuarioAvaliador);
+    public boolean descurtirUsuario (@PathVariable int idAvaliado, @PathVariable int idAvaliador){
+        return usuarioGerenciador.descurtirUsuario(idAvaliado, idAvaliador);
     }
 
     @DeleteMapping ("/{idAvaliado}/avaliador/{idAvaliador}/dislike")
-    public String removerDescurtidaUsuario (@PathVariable int idUsuarioAvaliado, @PathVariable  int idUsuarioAvaliador){
-        usuarioGerenciador.removerDescurtida(idUsuarioAvaliado, idUsuarioAvaliador);
-        return "Dislike deletado";
+    public String removerDescurtidaUsuario (@PathVariable int idAvaliado, @PathVariable  int idAvaliador){
+        usuarioGerenciador.removerDescurtida(idAvaliado, idAvaliador);
+        return null;
     }
 
-    @GetMapping ("/{id}")
+    @GetMapping ("/{idUsuarioAvaliado}")
     public List<Usuario> listarMatches (@PathVariable int idUsuarioAvaliado){
-        return usuarioGerenciador.ativarMatch(idUsuarioAvaliado);
+        return usuarioGerenciador.criarMatches(idUsuarioAvaliado);
     }
+
     @GetMapping ("/{idUsuario}/best")
-    public Usuario listarUsuarioBest (@PathVariable  int idUsuario){
-        return usuarioGerenciador.evolution(idUsuario);
+    public List<Usuario> listarUsuarioBest (@PathVariable int idUsuario){
+        return usuarioGerenciador.almasGemeas(idUsuario);
     }
 
 }

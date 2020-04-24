@@ -15,12 +15,12 @@ public class CuriosidadeGerenciador {
 
         for (Curiosidade curiosidadeExistente : curiosidades){
             if (curiosidade.getDescrição().equals(curiosidadeExistente.getDescrição())){
-                return curiosidadeExistente;
+                throw new RuntimeException("Esta curiosidade já foi cadastrada.");
             }
         }
         if (curiosidade.getDescrição().isEmpty() || curiosidade.getCategoriaCuriosidade() == null){
             System.out.println("Campo obrigatório não informado.");
-            return null;
+            throw new RuntimeException("Campo obrigatório não informado.");
         }
         return acervo.salvar(curiosidade);
     }
@@ -29,7 +29,7 @@ public class CuriosidadeGerenciador {
         Curiosidade curiosidadeParaEditar = procurar(id);
 
         if (curiosidadeParaEditar == null){
-            return null;
+            throw new RuntimeException("Curiosidade não cadastrada.");
         } else {
             return acervo.editar(curiosidadeParaEditar, curiosidadeAtualizada);
         }
@@ -44,13 +44,13 @@ public class CuriosidadeGerenciador {
         if (id > 0){
             return acervo.procurar(id);
         }
-        return null;
+        throw new RuntimeException("Curiosidade não cadastrada.");
     }
     @DeleteMapping("/{id}")
     public boolean deletar(@PathVariable int id){
         if (id > 0){
             return acervo.deletar(id);
         }
-        return false;
+        throw new RuntimeException("Curiosidade não cadastrada.");
     }
 }

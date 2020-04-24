@@ -16,12 +16,12 @@ public class EsporteGerenciador {
 
         for (Esporte esporteExistente : esportes){
             if (esporte.getNome().equals(esporteExistente.getNome())){
-                return esporteExistente;
+                throw new RuntimeException("Este esporte já foi cadastrado.");
             }
         }
         if (esporte.getNome().isEmpty()){
             System.out.println("Campo obrigatório não informado.");
-            return null;
+            throw new RuntimeException("Campo obrigatório não informado.");
         }
         return acervo.salvar(esporte);
     }
@@ -30,7 +30,7 @@ public class EsporteGerenciador {
         Esporte esporteParaEditar = procurar(id);
 
         if (esporteParaEditar == null){
-            return null;
+            throw new RuntimeException("Esporte não cadastrado.");
         } else {
             return acervo.editar(esporteParaEditar, esporteAtualizada);
         }
@@ -45,13 +45,13 @@ public class EsporteGerenciador {
         if (id > 0){
             return acervo.procurar(id);
         }
-        return null;
+        throw new RuntimeException("Esporte não cadastrado.");
     }
     @DeleteMapping("/{id}")
     public boolean deletar(@PathVariable int id){
         if (id > 0){
             return acervo.deletar(id);
         }
-        return false;
+        throw new RuntimeException("Esporte não cadastrado.");
     }
 }

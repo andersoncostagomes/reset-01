@@ -18,15 +18,15 @@ public class JogoGerenciador {
 
         for (Jogo jogoExistente : jogos){
             if (jogo.getNome().equals(jogoExistente.getNome()) || jogo.getPlataformaJogo().equals(jogoExistente.getPlataformaJogo())){
-                return jogoExistente;
+                throw new RuntimeException("Este jogo já foi cadastrado.");
             }
         }
         if (jogo.getNome().isEmpty() || jogo.getDataDeLançamento() == null || jogo.getCategoriaJogo() == null || jogo.getPlataformaJogo() == null){
             System.out.println("Campo obrigatório não informado.");
-            return null;
+            throw new RuntimeException("Campo obrigatório não informado.");
         }
         if (jogo.getDataDeLançamento().isAfter(LocalDate.now()) ){
-            return null;
+            throw new RuntimeException("Não pode ser cadastrado um jogo com data de lançamento futura.");
         }
         return acervo.salvar(jogo);
     }
@@ -35,7 +35,7 @@ public class JogoGerenciador {
         Jogo jogoParaEditar = procurar(id);
 
         if (jogoParaEditar == null){
-            return null;
+            throw new RuntimeException("Jogo não cadastrado.");
         } else {
             return acervo.editar(jogoParaEditar, jogoAtualizada);
         }
@@ -50,12 +50,12 @@ public class JogoGerenciador {
         if (id > 0){
             return acervo.procurar(id);
         }
-        return null;
+        throw new RuntimeException("Jogo não cadastrado.");
     }@DeleteMapping("/{id}")
     public boolean deletar(@PathVariable int id){
         if (id > 0){
             return acervo.deletar(id);
         }
-        return false;
+        throw new RuntimeException("Jogo não cadastrado.");
     }
 }

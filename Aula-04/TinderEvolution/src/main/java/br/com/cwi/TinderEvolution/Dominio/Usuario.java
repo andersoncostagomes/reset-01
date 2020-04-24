@@ -1,6 +1,6 @@
 package br.com.cwi.TinderEvolution.Dominio;
 
-import sun.awt.HKSCS;
+import com.sun.deploy.net.MessageHeader;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -156,27 +156,12 @@ public class Usuario {
         this.curiosidades = curiosidades;
     }
 
-    public List<Integer> getUsuariosCurtidos() {
-        return usuariosCurtidos;
-    }
-
-    public void setUsuariosCurtidos(List<Integer> usuariosCurtidos) {
-        this.usuariosCurtidos = usuariosCurtidos;
-    }
-
-    public List<Integer> getUsuariosDescurtidos() {
-        return usuariosDescurtidos;
-    }
-
-    public void setUsuariosDescurtidos(List<Integer> usuariosDescurtidos) {
-        this.usuariosDescurtidos = usuariosDescurtidos;
-    }
 
 
     //Músicas
     public boolean curtirMusica (int idMusica) {
         if (!musicasCurtidas.contains(idMusica)) {
-            musicasCurtidas.add(idMusica);
+            return musicasCurtidas.add(idMusica);
         }
         return false;
     }
@@ -239,7 +224,7 @@ public class Usuario {
         if (!esportesCurtidos.contains(idEsporte)) {
             esportesCurtidos.add(idEsporte);
         }
-        return true;
+        return false;
     }
 
     public Integer descurtirEsporte (int idEsporte){
@@ -254,7 +239,7 @@ public class Usuario {
         if (!curiosidades.contains(idCuriosidade)) {
             curiosidades.add(idCuriosidade);
         }
-        return true;
+        return false;
     }
 
     public Integer apagarCuriosidade (int idCuriosidade){
@@ -269,7 +254,7 @@ public class Usuario {
         if (!usuariosCurtidos.contains(idUsuario)) {
             usuariosCurtidos.add(idUsuario);
         }
-        return true;
+        return false;
     }
 
     public Integer removerCurtida (int idUsuario){
@@ -279,12 +264,13 @@ public class Usuario {
         }
         return null;
     }
+
     //Descurtir Usuário
     public boolean descurtirUsuario (int idUsuario) {
         if (!usuariosDescurtidos.contains(idUsuario)) {
             usuariosDescurtidos.add(idUsuario);
         }
-        return true;
+        return false;
     }
 
     public Integer removerDescurtida (int idUsuario){

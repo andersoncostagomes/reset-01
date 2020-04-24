@@ -18,15 +18,15 @@ public class MusicaGerenciador {
 
         for (Musica musicaExistente : musicas){
             if (musica.getNome().equals(musicaExistente.getNome())){
-                return musicaExistente;
+                throw new RuntimeException("Esta música já foi cadastrada.");
             }
         }
         if (musica.getNome().isEmpty() || musica.getArtista().isEmpty() || musica.getEstiloMusical() == null || musica.getLançamento() == null){
             System.out.println("Campo obrigatório não informado.");
-            return null;
+            throw new RuntimeException("Campo obrigatório não informado.");
         }
         if (musica.getLançamento().isAfter(LocalDate.now()) ){
-            return null;
+            throw new RuntimeException("Não pode ser cadastrada uma música com data de lançamento futura.");
         }
         return acervo.salvar(musica);
     }
@@ -35,7 +35,7 @@ public class MusicaGerenciador {
         Musica musicaParaEditar = procurar(id);
 
         if (musicaParaEditar == null){
-            return null;
+            throw new RuntimeException("Música não cadastrada.");
         } else {
             return acervo.editar(musicaParaEditar, musicaAtualizada);
         }
@@ -50,13 +50,13 @@ public class MusicaGerenciador {
         if (id > 0){
             return acervo.procurar(id);
         }
-        return null;
+        throw new RuntimeException("Música não cadastrada.");
     }
     @DeleteMapping("/{id}")
     public boolean deletar(@PathVariable("id") int id){
         if (id > 0){
             return acervo.deletar(id);
         }
-        return false;
+        throw new RuntimeException("Música não cadastrada.");
     }
 }

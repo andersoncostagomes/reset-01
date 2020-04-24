@@ -17,15 +17,15 @@ public class SerieGerenciador {
 
         for (Serie serieExistente : series){
             if (serie.getNome().equals(serieExistente.getNome())){
-                return serieExistente;
+                throw new RuntimeException("Esta série já foi cadastrada.");
             }
         }
         if (serie.getNome().isEmpty() || serie.getDiretor().isEmpty() || serie.getCategoriaSerie() == null || serie.getDataDeLançamento() == null || serie.getNumeroTemporadas() == 0 || serie.getNumeroEpisódios() == 0){
             System.out.println("Campo obrigatório não informado.");
-            return null;
+            throw new RuntimeException("Campo obrigatório não informado.");
         }
         if (serie.getDataDeLançamento().isAfter(LocalDate.now()) ){
-            return null;
+            throw new RuntimeException("Não pode ser cadastrada uma série com data de lançamento futura.");
         }
         return acervo.salvar(serie);
     }
@@ -34,7 +34,7 @@ public class SerieGerenciador {
         Serie serieParaEditar = procurar(id);
 
         if (serieParaEditar == null){
-            return null;
+            throw new RuntimeException("Série não cadastrada.");
         } else {
             return acervo.editar(serieParaEditar, serieAtualizada);
         }
@@ -49,14 +49,14 @@ public class SerieGerenciador {
         if (id > 0){
             return acervo.procurar(id);
         }
-        return null;
+        throw new RuntimeException("Série não cadastrada.");
     }
     @DeleteMapping("/{id}")
     public boolean deletar(@PathVariable int id){
         if (id > 0){
             return acervo.deletar(id);
         }
-        return false;
+        throw new RuntimeException("Série não cadastrada.");
     }
 }
 

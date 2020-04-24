@@ -18,15 +18,16 @@ public class FilmeGerenciador {
 
         for (Filme filmeExistente : filmes){
             if (filme.getNome().equals(filmeExistente.getNome())){
-                return filmeExistente;
+                throw new RuntimeException("Este filme já foi cadastrado.");
             }
         }
         if (filme.getNome().isEmpty() || filme.getDiretor().isEmpty() || filme.getCategoriaFilme() == null || filme.getDataDeLançamento() == null || filme.getSinopse().isEmpty()){
             System.out.println("Campo obrigatório não informado.");
-            return null;
+            throw new RuntimeException("Campo obrigatório não informado.");
+
         }
         if (filme.getDataDeLançamento().isAfter(LocalDate.now()) ){
-            return null;
+            throw new RuntimeException("Não pode ser cadastrado um filme com data de lançamento futura.");
         }
         return acervo.salvar(filme);
     }
@@ -35,7 +36,7 @@ public class FilmeGerenciador {
         Filme filmeParaEditar = procurar(id);
 
         if (filmeParaEditar == null){
-            return null;
+            throw new RuntimeException("Filme não cadastrado.");
         } else {
             return acervo.editar(filmeParaEditar, filmeAtualizada);
         }
@@ -50,14 +51,14 @@ public class FilmeGerenciador {
         if (id > 0){
             return acervo.procurar(id);
         }
-        return null;
+        throw new RuntimeException("Filme não cadastrado.");
     }
     @DeleteMapping("/{id}")
     public boolean deletar(@PathVariable int id){
         if (id > 0){
             return acervo.deletar(id);
         }
-        return false;
+        throw new RuntimeException("Filme não cadastrado.");
     }
 }
 
